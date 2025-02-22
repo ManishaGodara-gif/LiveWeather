@@ -13,7 +13,7 @@ export default function SearchBox({updateInfo}) {
 
     let getWeatherInfo = async () => {
         try{
-        let response = await fetch(`${API_URL}q=${city}&appid=${API_KEY}`);
+        let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}`);
         let jsonResponse = await response.json();
         console.log(jsonResponse);
         let result = {
